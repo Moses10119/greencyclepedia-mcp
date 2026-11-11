@@ -4,5 +4,5 @@ contact_links:
     url: https://greencyclepedia.com/#view=contact
     about: The site's contact form, topic "A correction to a source".
   - name: Report a security problem
-    url: https://github.com/Moses10119/greencycle-atlas-mcp/blob/main/SECURITY.md
+    url: https://github.com/Moses10119/greencyclepedia-mcp/blob/main/SECURITY.md
     about: Privately, never in a public issue.

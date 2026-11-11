@@ -1,6 +1,6 @@
 name: Live server check
 
-# Once a day: the hosted server answers tools/list with get_compound among its tools, and its server card names it.
+# Once a day: the hosted server answers tools/list with get_compound among its tools, and its server card names it (the new registry name, or the old one until the rename goes live).
 # No secrets. The user agent and X-GC-Automated header keep these checks out of the server's visitor and MCP counts.
 on:
   schedule:
@@ -29,4 +29,4 @@ jobs:
         run: |
           set -euo pipefail
           curl -sS --fail --max-time 30 -A 'GCAtlasTest-uptime/1.0 (GitHub Actions)' -H 'X-GC-Automated: 1' \
-            https://greencyclepedia.com/.well-known/mcp.json | jq -e '.name == "com.greencyclepedia/atlas"'
+            https://greencyclepedia.com/.well-known/mcp.json | jq -e '.name == "com.greencyclepedia/mcp" or .name == "com.greencyclepedia/atlas"'

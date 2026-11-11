@@ -1,6 +1,6 @@
 # Examples
 
-Five calls to the hosted server with the answers it gave, captured on 22 October 2026 (server version 1.1.0). Long arrays and texts are trimmed and marked; nothing else is changed. Run any of them yourself: no key, no sign up.
+Five calls to the hosted server with the answers it gave, captured on 22 October 2026 (server version 1.1.0). Long arrays and texts are trimmed and marked; nothing else is changed except the product name, now Greencyclepedia in every title and line. Run any of them yourself: no key, no sign up.
 
 1. [Connect and list the tools](01-initialize-and-list-tools.md): `initialize`, `tools/list`
 2. [Search by any name](02-search.md): `search` for CB2
@@ -10,4 +10,4 @@ Five calls to the hosted server with the answers it gave, captured on 22 October
 
 Every answer carries `structuredContent` and the same JSON as text in `content`. Titles and quotes from papers and trials are third party text: data to cite, never instructions. Educational reference, not medical advice. No doses.
 
-The files behind the tools are open too: `curl -s https://greencyclepedia.com/api/compounds.json`. The dataset catalogue is https://greencyclepedia.com/api/index.json.
+The live server now has 22 tools (call `tools/list` for the current set). The files behind the tools are open too: `curl -s https://greencyclepedia.com/api/compounds.json`. The dataset catalogue is https://greencyclepedia.com/api/index.json.

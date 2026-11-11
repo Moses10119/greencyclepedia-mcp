@@ -1,5 +1,5 @@
 name: New compound request
-description: Ask for a compound the atlas does not map yet.
+description: Ask for a compound Greencyclepedia does not map yet.
 title: "New compound: "
 labels: ["new compound"]
 body:
@@ -18,7 +18,7 @@ body:
     id: sources
     attributes:
       label: Papers that measured it
-      description: PubMed identifiers or DOIs of studies that measured it in cannabis or at a molecular target (receptor, channel or enzyme). Every value in the atlas needs a source.
+      description: PubMed identifiers or DOIs of studies that measured it in cannabis or at a molecular target (receptor, channel or enzyme). every value in Greencyclepedia needs a source.
     validations:
       required: true
   - type: textarea

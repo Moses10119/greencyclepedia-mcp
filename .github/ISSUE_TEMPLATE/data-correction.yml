@@ -1,5 +1,5 @@
 name: Data correction
-description: A value, source or text in the atlas is wrong, missing or misread.
+description: A value, source or text in Greencyclepedia is wrong, missing or misread.
 title: "Correction: "
 labels: ["data correction"]
 body:
@@ -7,7 +7,7 @@ body:
     id: record
     attributes:
       label: Record
-      description: The atlas id or page, for example compound:cbd or https://greencyclepedia.com/compounds/cbd/
+      description: The Greencyclepedia id or page, for example compound:cbd or https://greencyclepedia.com/compounds/cbd/
     validations:
       required: true
   - type: input

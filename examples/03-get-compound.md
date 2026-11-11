@@ -128,14 +128,14 @@ curl -s https://greencyclepedia.com/mcp \
       "[14 more sources left out]"
     ],
     "licences": [
-      "GreenCycle Compound Atlas curation and text: CC BY 4.0",
+      "Greencyclepedia curation and text: CC BY 4.0",
       "PubChem, National Library of Medicine: Public domain",
       "IUPHAR/BPS Guide to PHARMACOLOGY: CC BY-SA 4.0"
     ],
     "thirdPartyText": "Titles, quotes, summaries and names of papers, trials and products in this result are third party text copied word for [trimmed]",
     "notice": "Educational reference, not medical advice. No doses are given. Talk to a doctor or pharmacist about any medicine, including cannabis.",
-    "howToCite": "Give the person the link of a record; cite its url (the atlas page) and the original papers (PubMed links) for any finding.",
-    "citation": "GreenCycle Compound Atlas. CBD. Version 2026-10-20. Retrieved 2026-10-22 from https://greencyclepedia.com/compounds/cbd/. Sources: PubChem CID 644019; PMID 17876302; PMID 21079038; PMID 32880179; PMID 39835903; PMID 30219789; PMID 37330538."
+    "howToCite": "Give the person the link of a record; cite its url (the Greencyclepedia page) and the original papers (PubMed links) for any finding.",
+    "citation": "Greencyclepedia. CBD. Version 2026-10-20. Retrieved 2026-10-22 from https://greencyclepedia.com/compounds/cbd/. Sources: PubChem CID 644019; PMID 17876302; PMID 21079038; PMID 32880179; PMID 39835903; PMID 30219789; PMID 37330538."
   }
 }
 ```

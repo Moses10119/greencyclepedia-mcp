@@ -1,0 +1,47 @@
+name: Release
+
+# Push a tag such as v1.9.0 and this creates the GitHub release: named after the tag,
+# with that version's section of CHANGELOG.md as the notes, and any *.mcpb file in the
+# repository attached (the Claude Desktop one-click file). If no .mcpb is committed,
+# the release is still created without it.
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Write the notes from CHANGELOG.md
+        run: |
+          set -euo pipefail
+          version="${GITHUB_REF_NAME#v}"
+          awk -v v="$version" '
+            $0 ~ "^## " v " " { on = 1; next }
+            /^## / { on = 0 }
+            on { print }
+          ' CHANGELOG.md > notes.md
+          if [ ! -s notes.md ]; then
+            echo "CHANGELOG.md has no section for $version" >&2
+            exit 1
+          fi
+          cat notes.md
+
+      - name: Create the release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          files=$(find . -name '*.mcpb' -not -path './.git/*' | head -n 5)
+          if [ -z "$files" ]; then
+            echo "No .mcpb file in the repository: creating the release without one."
+          fi
+          # shellcheck disable=SC2086
+          gh release create "$GITHUB_REF_NAME" $files --title "$GITHUB_REF_NAME" --notes-file notes.md --verify-tag

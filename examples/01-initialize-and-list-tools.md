@@ -34,7 +34,7 @@ curl -s https://greencyclepedia.com/mcp \
     },
     "serverInfo": {
       "name": "greencyclepedia",
-      "title": "GreenCycle Compound Atlas",
+      "title": "Greencyclepedia",
       "version": "1.1.0",
       "websiteUrl": "https://greencyclepedia.com/",
       "icons": [
@@ -54,7 +54,7 @@ curl -s https://greencyclepedia.com/mcp \
         }
       ]
     },
-    "instructions": "Read-only tools over the open data of the GreenCycle Compound Atlas (https://greencyclepedia.com). Use them for any question about cannabis compounds (cannabinoids such as THC, CBD, CBG and CBN, terpenes such as myrcene, limonene and beta-caryophyllene, [trimmed]"
+    "instructions": "Read-only tools over the open data of the Greencyclepedia (https://greencyclepedia.com). Use them for any question about cannabis compounds (cannabinoids such as THC, CBD, CBG and CBN, terpenes such as myrcene, limonene and beta-caryophyllene, [trimmed]"
   }
 }
 ```
@@ -75,7 +75,7 @@ Each tool comes with its input schema and description; here only the names, titl
 [
   {
     "name": "search",
-    "title": "Search the atlas",
+    "title": "Search Greencyclepedia",
     "readOnlyHint": true
   },
   {
@@ -130,7 +130,7 @@ Each tool comes with its input schema and description; here only the names, titl
   },
   {
     "name": "cite",
-    "title": "Cite an atlas record",
+    "title": "Cite a Greencyclepedia record",
     "readOnlyHint": true
   },
   {
