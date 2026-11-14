@@ -18,6 +18,22 @@ Your AI assistant answers cannabis science questions from sourced records: compo
 
 The server runs at `https://greencyclepedia.com/mcp`. This repository holds its listing, [worked examples](examples/README.md) and the templates to [report a data error](CONTRIBUTING.md).
 
+## See it in 5 seconds
+
+Ask your assistant "Is it true that CBD helps with epilepsy?". It calls `check_claim` and gets this back (live answer of 14 Nov 2026, shortened):
+
+```
+claim:    CBD helps with epilepsy
+found:    CBD (compound), Drug-resistant epilepsy (condition)
+studies:  5 held: 4 human trials, 1 human study with its design not stated
+level:    human trials found
+top:      PMID 28538134  Devinsky O et al. NEJM 2017 (Dravet syndrome), randomised, 120 people
+          PMID 29768152  Devinsky O et al. NEJM 2018 (Lennox-Gastaut), randomised, 225 people
+          PMID 29395273  Thiele EA et al. Lancet 2018 (GWPCARE4), randomised, 86 people
+```
+
+Never "true" or "false": the records it found, how strong the studies are, and the papers to read.
+
 ## Connect in 30 seconds
 
 **Claude Code**
