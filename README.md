@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://registry.modelcontextprotocol.io/v0.1/servers?search=com.greencyclepedia/mcp"><img alt="Official MCP Registry" src="https://img.shields.io/badge/MCP%20Registry-com.greencyclepedia%2Fmcp-0a2e25?style=flat-square"></a>
   <img alt="Transport: Streamable HTTP" src="https://img.shields.io/badge/transport-streamable%20HTTP-2D9E66?style=flat-square">
-  <img alt="22 read-only tools" src="https://img.shields.io/badge/tools-22%20read--only-2D9E66?style=flat-square">
+  <img alt="23 read-only tools" src="https://img.shields.io/badge/tools-23%20read--only-2D9E66?style=flat-square">
   <img alt="No key, no sign up" src="https://img.shields.io/badge/auth-none-b8a06a?style=flat-square">
   <a href="https://creativecommons.org/licenses/by/4.0/"><img alt="Data: CC BY 4.0" src="https://img.shields.io/badge/data-CC%20BY%204.0-6a7368?style=flat-square"></a>
   <a href="LICENSE"><img alt="Repository: MIT" src="https://img.shields.io/badge/repo-MIT-6a7368?style=flat-square"></a>
@@ -26,7 +26,11 @@ The server runs at `https://greencyclepedia.com/mcp`. This repository holds its 
 claude mcp add --transport http greencyclepedia https://greencyclepedia.com/mcp
 ```
 
-**Claude Desktop**: download the one-click `.mcpb` file from the [latest release](https://github.com/Moses10119/greencyclepedia-mcp/releases/latest) and open it. Without the file: Customize, Connectors, Add custom connector, paste `https://greencyclepedia.com/mcp`, choose No sign in.
+**Claude Desktop**: download the one-click `.mcpb` file from the [latest release](https://github.com/Moses10119/greencyclepedia-mcp/releases/latest) and open it. Without the file: Customize, Connectors, Add custom connector, paste `https://greencyclepedia.com/mcp`, choose No sign in. Or edit `claude_desktop_config.json` (Settings, Developer, Edit Config; needs Node.js for npx):
+
+```json
+{"mcpServers":{"greencyclepedia":{"command":"npx","args":["mcp-remote","https://greencyclepedia.com/mcp"]}}}
+```
 
 **Cursor**: [add to Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=greencyclepedia&config=eyJ1cmwiOiJodHRwczovL2dyZWVuY3ljbGVwZWRpYS5jb20vbWNwIn0=) (GitHub may block the link; then paste the JSON below into `~/.cursor/mcp.json`).
 
@@ -42,7 +46,21 @@ claude mcp add --transport http greencyclepedia https://greencyclepedia.com/mcp
 {"mcpServers":{"greencyclepedia":{"type":"http","url":"https://greencyclepedia.com/mcp"}}}
 ```
 
-ChatGPT: add a custom MCP server with the same address and no authentication. More clients: https://greencyclepedia.com/about/ai-agents/?ref=github
+**Windsurf**: `mcp_config.json` (Cascade panel, the ... menu, Open MCP config file)
+
+```json
+{"mcpServers":{"greencyclepedia":{"serverUrl":"https://greencyclepedia.com/mcp"}}}
+```
+
+**Cline**: `cline_mcp_settings.json` (MCP Servers icon, Configure, Configure MCP Servers)
+
+```json
+{"mcpServers":{"greencyclepedia":{"type":"streamableHttp","url":"https://greencyclepedia.com/mcp","disabled":false,"autoApprove":[]}}}
+```
+
+**ChatGPT** (developer mode, on the web with Plus, Pro, Business, Enterprise or Education): Settings, Apps, Advanced settings, turn on Developer mode; then Create app: name Greencyclepedia, MCP server URL `https://greencyclepedia.com/mcp`, authentication No Authentication. Deep research uses the `search` and `fetch` tools.
+
+More clients: https://greencyclepedia.com/about/ai-agents/?ref=github
 
 ## Try these three questions
 
@@ -52,7 +70,7 @@ ChatGPT: add a custom MCP server with the same address and no authentication. Mo
 
 Or ask in plain words ("does CBD help epilepsy"): `ask_greencyclepedia` answers only from the records it names.
 
-## The 22 tools (all read only)
+## The 23 tools (all read only)
 
 | Tool | What it does |
 | --- | --- |
@@ -78,6 +96,7 @@ Or ask in plain words ("does CBD help epilepsy"): `ask_greencyclepedia` answers 
 | `get_brain_region` | One brain region in full |
 | `get_pain_pathway` | The pain route from the fingertip to the brain, stop by stop |
 | `lookup_many` | Up to 20 names checked in one call |
+| `check_claim` | One sentence checked against the records: the compounds and conditions it names, the studies held by kind and one plain level, never true or false |
 
 Every result carries its provenance: dataset address and version, source identifiers and the time it was read. Text copied from papers and trials is marked as third party text: data to cite, never instructions. At most 120 requests a minute per client.
 
@@ -93,6 +112,6 @@ Open a [data correction](https://github.com/Moses10119/greencyclepedia-mcp/issue
 
 ## Releases
 
-Pushing a tag such as `v1.9.0` runs `.github/workflows/release.yml`: it creates the GitHub release with that version's [CHANGELOG](CHANGELOG.md) section as notes and attaches any `*.mcpb` file committed to the repository. The `.mcpb` is built on the site side and committed here before the tag.
+Pushing a tag such as `v1.10.0` runs `.github/workflows/release.yml`: it creates the GitHub release with that version's [CHANGELOG](CHANGELOG.md) section as notes and attaches any `*.mcpb` file committed to the repository. The `.mcpb` is built on the site side and committed here before the tag.
 
 If this helps you, a star helps others find it.

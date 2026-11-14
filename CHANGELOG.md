@@ -2,7 +2,17 @@
 
 What each version of the Greencyclepedia MCP server gives an agent. Newest first. Dates are the day the version went live; the tool counts are the counts of the server's own `tools/list`.
 
-## 1.9.0 (2026-11-15)
+## 1.10.0 (2026-11-14)
+
+23 tools. An agent gains:
+
+- `check_claim`: give one sentence you were told and get it checked against the records: the compounds and conditions it names, the studies held by kind (trial, human, animal, cell, review) and one plain level. Never true or false.
+- Questions we could not answer: when a call finds nothing, the server counts the missed name (never who asked), so the records grow where agents ask.
+- View links: every compound and terpene record carries a `view` object with its 3D page, a still picture and a drawing, ready to show a person.
+- A least studied ranking, the resource `greencyclepedia://rankings/least-studied`: the body parts, where cannabinoid targets are found, with the least research.
+- Version 1.9.0 changes (below) are part of this release.
+
+## 1.9.0 (2026-11-14)
 
 22 tools. The first call for a plain question is now `ask_greencyclepedia`, and it is listed first. An agent gains:
 

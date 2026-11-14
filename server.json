@@ -3,7 +3,7 @@
   "name": "com.greencyclepedia/mcp",
   "title": "Greencyclepedia",
   "description": "Read-only cannabis compound, receptor, body map and evidence data from Greencyclepedia, every value sourced.",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "websiteUrl": "https://greencyclepedia.com/",
   "repository": {
     "url": "https://github.com/Moses10119/greencyclepedia-mcp",
