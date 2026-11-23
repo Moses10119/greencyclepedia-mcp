@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "com.greencyclepedia/mcp",
   "title": "Greencyclepedia",
-  "description": "Read-only cannabis compound, receptor, body map and evidence data from Greencyclepedia, every value sourced.",
-  "version": "1.10.0",
+  "description": "Read-only cannabis compound, receptor, body map and evidence data, every value sourced.",
+  "version": "1.11.0",
   "websiteUrl": "https://greencyclepedia.com/",
   "repository": {
     "url": "https://github.com/Moses10119/greencyclepedia-mcp",

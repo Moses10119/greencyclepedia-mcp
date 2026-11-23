@@ -99,7 +99,7 @@ Or ask in plain words ("does CBD help epilepsy"): `ask_greencyclepedia` answers 
 | `get_target` | One receptor, channel or enzyme with its compounds and measured values |
 | `list_structures_for_target` | Body structures that carry a target |
 | `find_studies` | The PubMed studies behind a compound, target or condition |
-| `search_conditions` | Conditions by evidence grade, with reviews and trials, never doses |
+| `search_conditions` | 45 conditions graded on an evidence ladder with the reviews and trials behind each, and 8 risk topics answered as risk research with the reviews behind them and no grade. Some list trials testing a cannabis medicine, kept apart. Never doses |
 | `list_trials` | Registered trials from the ClinicalTrials.gov snapshot |
 | `get_cultivar` | Laboratory measurements of one cultivar |
 | `cite` | A ready citation: url, citation line, BibTeX, original papers, licence |

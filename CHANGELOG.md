@@ -2,6 +2,10 @@
 
 What each version of the Greencyclepedia MCP server gives an agent. Newest first. Dates are the day the version went live; the tool counts are the counts of the server's own `tools/list`.
 
+## 1.11.0 (2026-11-24)
+
+Conditions release. `search_conditions` now returns 45 conditions graded on an evidence ladder, and 8 risk topics answered as risk research with the reviews behind them and no grade. Some risk topics list trials testing a cannabis medicine, kept apart from the research. Never doses.
+
 ## 1.10.0 (2026-11-14)
 
 23 tools. An agent gains:
